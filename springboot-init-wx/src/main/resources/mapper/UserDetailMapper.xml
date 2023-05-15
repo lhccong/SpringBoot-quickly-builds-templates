@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cong.springbootinit.mapper.UserDetailMapper">
+
+    <resultMap id="BaseResultMap" type="com.cong.springbootinit.model.entity.UserDetail">
+            <id property="kbId" column="kb_id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="realName" column="real_name" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="signature" column="signature" jdbcType="VARCHAR"/>
+            <result property="birthdate" column="Birthdate" jdbcType="TIMESTAMP"/>
+            <result property="constellation" column="constellation" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        kb_id,user_id,real_name,
+        phone,signature,Birthdate,email,
+        constellation,update_time,create_time,
+        is_delete
+    </sql>
+</mapper>
